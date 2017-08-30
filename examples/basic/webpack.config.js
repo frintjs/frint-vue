@@ -14,7 +14,5 @@ module.exports = {
       },
     ]
   },
-  externals: {
-    'frint-vue': 'FrintVue',
-  },
+  externals: {},
 }

@@ -1,12 +1,10 @@
-import FrintVue from '../../../packages/frint-vue';
+import { render } from 'frint-vue';
 
-window.FrintVue = FrintVue;
+import RootApp from './app-root/app'
+import ChildApp from './app-child';
 
-const App = require('./app-root/app').default;
-const ChildApp = require('./app-child').default;
-
-window.app = new App();
-FrintVue.render(window.app, '#root');
+window.app = new RootApp();
+render(window.app, '#root');
 
 window.app.registerApp(ChildApp, {
   regions: ['sidebar'],
