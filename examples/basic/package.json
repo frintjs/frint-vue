@@ -1,0 +1,31 @@
+{
+  "name": "frint-vue-basic-example",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start:server": "live-server build",
+    "start": "npm run build && npm run start:server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-es2015": "^6.24.1",
+    "live-server": "^1.2.0",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "frint": "^2.2.1",
+    "frint-vue": "^0.1.0",
+    "vue": "^2.4.2"
+  }
+}

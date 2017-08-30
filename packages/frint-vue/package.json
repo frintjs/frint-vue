@@ -1,0 +1,42 @@
+{
+  "name": "frint-vue",
+  "version": "0.0.2",
+  "description": "VueJS package for FrintJS",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/frintjs/frint-vue/tree/master/packages/frint-vue",
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --color '{src,test}/**/*.js'",
+    "transpile": "../../node_modules/.bin/babel src --out-dir lib",
+    "test": "../../node_modules/.bin/mocha --colors --compilers js:babel-register --recursive './src/**/*.spec.js'",
+    "cover:run": "../../node_modules/.bin/nyc --reporter=json --require babel-register ../../node_modules/.bin/mocha --colors --compilers js:babel-register --recursive './src/**/*.spec.js'",
+    "cover:report": "../../node_modules/.bin/nyc report",
+    "cover": "npm run cover:run && npm run cover:report",
+    "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
+    "dist:min": "DIST_MIN=1 ../../node_modules/.bin/webpack --config ./webpack.config.js",
+    "dist": "npm run dist:lib && npm run dist:min",
+    "prepublish": "npm run transpile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frintjs/frint-vue.git"
+  },
+  "author": {
+    "name": "Fahad Ibnay Heylaal",
+    "url": "https://github.com/fahad19"
+  },
+  "keywords": [
+    "frint",
+    "vue"
+  ],
+  "dependencies": {
+    "frint-component-handlers": "^2.4.0",
+    "frint-component-utils": "^2.4.0"
+  },
+  "devDependencies": {
+    "vue": "^2.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/frintjs/frint-vue/issues"
+  },
+  "license": "MIT"
+}

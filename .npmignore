@@ -1,0 +1,14 @@
+!lib/
+src
+test
+Makefile
+book.json
+node_modules
+npm-debug.log
+*~
+*.swp
+*.swo
+coverage
+.nyc_output/
+examples/
+.changelog/
